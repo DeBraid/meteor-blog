@@ -8,16 +8,12 @@
 </head>
 
 <body>
+      
+    <h1>Sample Meteor Blog</h1>
+    {{> blog }}
+
+    {{> listBlogs }}
   
-  <div class="row">
-    <div class="container">
-        
-      <h1>Sample Meteor Blog</h1>
-      {{> blog }}
-
-    </div>
-  </div>
-
 </body>
 
 <template name="blog">
@@ -49,4 +45,14 @@
 
         </div>
     </div>
+</template>
+
+
+<template name="listBlogs">
+{{#each blogs }}
+
+  <h3>{{ title }}</h3>
+  <p>{{ body }}</p>
+  
+{{/each }}  
 </template>
