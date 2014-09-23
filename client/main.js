@@ -1,10 +1,10 @@
 Template.blog.events({
 
-  'submit #blogForm': function (e, templ) {
+  'submit #blogForm': function (e, tmpl) {
     e.preventDefault();
 
-    var title = templ.find('#blogTitle').value,
-        body = templ.find('#blogBody').value;
+    var title = tmpl.find('#blogTitle').value,
+        body = tmpl.find('#blogBody').value;
 
     Meteor.call('submitPost', title, body);
 
@@ -14,3 +14,8 @@ Template.blog.events({
 Template.listBlogs.blogs = function () {
   return Blogs.find();
 }
+
+var DateFormats = {
+       short: "DD MMMM - YYYY",
+       long: "dddd DD.MM.YYYY HH:mm"
+};

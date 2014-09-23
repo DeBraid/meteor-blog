@@ -1,5 +1,5 @@
 Meteor.methods({
-  'submitPost': function  ( title, body ) {
+  'submitPost': function  ( title , body ) {
     console.log(title);
     console.log(body);
 
