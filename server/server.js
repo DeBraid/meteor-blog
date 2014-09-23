@@ -1,3 +1,7 @@
+Meteor.publish('blogs', function () {
+  return Blogs.find();
+})
+
 Meteor.methods({
   'submitPost': function  ( title , body ) {
     console.log(title);
